@@ -190,7 +190,7 @@ IF kind = 2 THEN
      Pr = (value(3) BITOR (value(4) << 8)) BITAND $00FFFF
      Pa = (S*Pr + O)/2^14
 
-     ! Convert from Pascal to Bar.
+     ! Convert to height - Modify the 1020.0 depending on start Pressure
      Pa = (1020.-(Pa/100))*10
      PRINT "JS h: "; Pa; " m  ";
 
