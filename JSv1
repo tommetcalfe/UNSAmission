@@ -191,8 +191,8 @@ IF kind = 2 THEN
      Pa = (S*Pr + O)/2^14
 
      ! Convert from Pascal to Bar.
-     Pa = Pa/100000.0
-     PRINT "JS p: "; Pa; " Bar";
+     Pa = (1020.-(Pa/100))*10
+     PRINT "JS h: "; Pa; " m  ";
 
      ! Add the temperature.
      T = m_barCalib(2)/2^10 + Tr*m_barCalib(1)/2^24
