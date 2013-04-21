@@ -192,11 +192,11 @@ IF kind = 2 THEN
 
      ! Convert from Pascal to Bar.
      Pa = Pa/100000.0
-     PRINT "UNSA Pressure: "; Pa; " Bar";
+     PRINT "JS p: "; Pa; " Bar";
 
      ! Add the temperature.
      T = m_barCalib(2)/2^10 + Tr*m_barCalib(1)/2^24
-     PRINT ", UNSA temperature: "; T
+     PRINT "JS t: "; T
 
    CASE "F000AA43" & servicesHeader
      ! Get the pressure calibration data.
@@ -218,13 +218,3 @@ ELSE IF kind = 3 AND err <> 0 THEN
  PRINT "Error writing "; characteristic.uuid; ": ("; err; ") "; message
 END IF
 END SUB
-
-
-
-
---
-Sent on the move.
-Please excuse any typos.
-
-+447875330556
-@tommetcalfe
