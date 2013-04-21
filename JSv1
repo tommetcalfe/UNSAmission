@@ -190,6 +190,8 @@ IF kind = 2 THEN
      Pr = (value(3) BITOR (value(4) << 8)) BITAND $00FFFF
      Pa = (S*Pr + O)/2^14
 
+! -----------------------------------------------------------------------------
+
      ! Convert to height - Modify the 1020.0 depending on start Pressure
      Pa = (1020.-(Pa/100))*10
      PRINT "JS h: "; Pa; " m  ";
@@ -197,6 +199,8 @@ IF kind = 2 THEN
      ! Add the temperature.
      T = m_barCalib(2)/2^10 + Tr*m_barCalib(1)/2^24
      PRINT "JS t: "; T
+
+! -----------------------------------------------------------------------------
 
    CASE "F000AA43" & servicesHeader
      ! Get the pressure calibration data.
